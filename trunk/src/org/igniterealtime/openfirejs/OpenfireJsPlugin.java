@@ -211,7 +211,6 @@ public class OpenfireJsPlugin implements Plugin, PropertyEventListener, ClusterE
 			if ("js.".equals(scriptPropertyName.substring(0,3))) // script file (.js, .zip, jar)
 			{
 				String scriptPath = scriptPropertyValue;
-				String scriptName = scriptPath + File.separator + scriptPropertyName.substring(3) + ".js";
 
 				File file = new File(scriptPath);
 				home = file.isFile() && StringUtils.isZipOrJarFile(scriptPath) ? new ZipRepository(file) : new FileRepository(file);
@@ -220,9 +219,9 @@ public class OpenfireJsPlugin implements Plugin, PropertyEventListener, ClusterE
 
 				if (config != null)
 				{
-					Log.info( "["+ NAME + "] Processing Ringo Script File " + scriptName);
+					Log.info( "["+ NAME + "] Processing Ringo Script File " + scriptPath);
 
-					config.setMainScript(scriptName);
+					config.setMainScript(scriptPath);
 
 					engine = new RhinoEngine(config, null);
 					scripts.put(scriptPropertyName, engine);
@@ -234,7 +233,6 @@ public class OpenfireJsPlugin implements Plugin, PropertyEventListener, ClusterE
 
 			if ("xjs.".equals(scriptPropertyName.substring(0,4))) // executeable script
 			{
-				String scriptName = scriptPropertyName.substring(4);
 				String scriptCode = scriptPropertyValue;
 
 				home = new FileRepository(pluginDirectory);
@@ -243,8 +241,8 @@ public class OpenfireJsPlugin implements Plugin, PropertyEventListener, ClusterE
 
 				if (config != null)
 				{
-					Log.info( "["+ NAME + "] Processing Ringo Script Code " + scriptName);
-					Log.debug( "["+ NAME + "] Processing Ringo Script Code " + scriptName + "\n" + scriptCode);
+					Log.info( "["+ NAME + "] Processing Ringo Script Code " + scriptPropertyName);
+					Log.debug( "["+ NAME + "] Processing Ringo Script Code " + scriptPropertyName + "\n" + scriptCode);
 
 					config.setMainScript(null);
 
@@ -457,13 +455,16 @@ public class OpenfireJsPlugin implements Plugin, PropertyEventListener, ClusterE
 
     public void propertySet(String property, Map params)
     {
-		if (scripts.containsKey(property))
+		if ("js.".equals(property.substring(0,3)) || "xjs.".equals(property.substring(0,4)))
 		{
 			String value = (String)params.get("value");
 
-			RhinoEngine engine = scripts.get(property);
-			Context cx = engine.getContextFactory().enterContext();
-			cx.exit();
+			if (scripts.containsKey(property))
+			{
+				RhinoEngine engine = scripts.get(property);
+				Context cx = engine.getContextFactory().enterContext();
+				cx.exit();
+			}
 
 			executeScript(property, value);
 		}
