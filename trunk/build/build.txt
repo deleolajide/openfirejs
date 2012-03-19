@@ -6,7 +6,59 @@ clean:
 init:
 
 compile:
-    [javac] Compiling 49 source files to D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\build\classes
+    [javac] Compiling 1 source file to D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\build\classes
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:116: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] Initializing OpenfireJs Plugin");
+    [javac] 		   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:117: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] OpenfireJs Ringo Version " + RhinoEngine.VERSION.get(0) + "." + RhinoEngine.VERSION.get(1));
+    [javac] 		   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:153: warning: [deprecation] error(java.lang.String,java.lang.Throwable) in org.jivesoftware.util.Log has been deprecated
+    [javac] 					Log.error("Error initializing OpenfireJs Plugin ", e);
+    [javac] 					   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:199: warning: [deprecation] error(java.lang.String,java.lang.Throwable) in org.jivesoftware.util.Log has been deprecated
+    [javac] 			Log.error("Error OpenfireJs Plugin createConfig ", e);
+    [javac] 			   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:223: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 					Log.info( "["+ NAME + "] Processing Ringo Script File " + scriptName);
+    [javac] 					   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:246: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 					Log.info( "["+ NAME + "] Processing Ringo Script Code " + scriptName);
+    [javac] 					   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:247: warning: [deprecation] debug(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 					Log.debug( "["+ NAME + "] Processing Ringo Script Code " + scriptName + "\n" + scriptCode);
+    [javac] 					   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:262: warning: [deprecation] error(java.lang.String,java.lang.Throwable) in org.jivesoftware.util.Log has been deprecated
+    [javac] 			Log.error("Error running OpenfireJs scripts ", e);
+    [javac] 			   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:269: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] unloading " + NAME + " plugin resources");
+    [javac] 		   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:287: warning: [deprecation] error(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 			Log.error("destroyPlugin " + e);
+    [javac] 			   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:307: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 			Log.info( "["+ NAME + "] createWebAppContext - Creating web service " + NAME);
+    [javac] 			   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:320: warning: [deprecation] error(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 			Log.error("["+ NAME + "] createWebAppContext exception " + e);
+    [javac] 			   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:332: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] joinedCluster");
+    [javac] 		   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:343: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] leftCluster");
+    [javac] 		   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:354: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] markedAsSeniorClusterMember");
+    [javac] 		   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:366: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] startCluster - Adding listener");
+    [javac] 		   ^
+    [javac] D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\src\org\igniterealtime\openfirejs\OpenfireJsPlugin.java:372: warning: [deprecation] info(java.lang.String) in org.jivesoftware.util.Log has been deprecated
+    [javac] 		Log.info( "["+ NAME + "] stopCluster - Removing listener");
+    [javac] 		   ^
+    [javac] 17 warnings
 
 jar:
       [jar] Building jar: D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\plugin\lib\openfirejs.jar
@@ -16,4 +68,4 @@ war:
       [jar] Building jar: D:\Work\Projects\2010.04.21-iTrader\Workspace\openfire_3_7_0\target\openfire\plugins\openfirejs.war
 
 BUILD SUCCESSFUL
-Total time: 10 seconds
+Total time: 2 seconds
