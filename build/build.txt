@@ -1,0 +1,19 @@
+Buildfile: build.xml
+
+clean:
+   [delete] Deleting: D:\Work\Projects\2010.04.21-iTrader\Workspace\openfire_3_7_0\target\openfire\plugins\openfirejs.war
+
+init:
+
+compile:
+    [javac] Compiling 49 source files to D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\build\classes
+
+jar:
+      [jar] Building jar: D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\plugin\lib\openfirejs.jar
+      [jar] Building jar: D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin\plugin\WEB-INF\lib\openfirejs.jar
+
+war:
+      [jar] Building jar: D:\Work\Projects\2010.04.21-iTrader\Workspace\openfire_3_7_0\target\openfire\plugins\openfirejs.war
+
+BUILD SUCCESSFUL
+Total time: 10 seconds
