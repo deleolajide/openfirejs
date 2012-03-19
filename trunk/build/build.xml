@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="OpenfireJsPlugin" default="war">
+	<description>OpenfireJs Plugin Build</description>
+	<property name="openfire.home" value="D:\Work\Projects\2010.04.21-iTrader\Workspace\openfire_3_7_0\target\openfire" />
+	<property name="openfireJsPlugin.dir" value="D:\Work\Projects\2010.04.21-iTrader\Workspace\OpenfireJsPlugin" />
+
+	<path id="build.classpath">
+		<fileset dir="${openfireJsPlugin.dir}\plugin\lib" includes="*.jar"/>
+		<fileset dir="${openfire.home}\lib" includes="openfire.jar"/>
+		<fileset dir="${openfire.home}\lib" includes="servlet.jar"/>
+	</path>
+
+	<target name="init">
+		<!-- create our directories -->
+		<mkdir dir="${openfireJsPlugin.dir}\build\classes"/>
+	</target>
+	
+	<target name="clean">
+        <delete dir="${openfireJsPlugin.dir}\build\classes\com"/>
+        <delete dir="${openfire.home}\plugins\openfirejs"/>
+        <delete file="${openfire.home}\plugins\openfirejs.war"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac debug="true" deprecation="true" srcdir="${openfireJsPlugin.dir}\src" destdir="${openfireJsPlugin.dir}\build\classes">
+			<classpath refid="build.classpath"/>
+		</javac>
+	</target>
+
+	<target name="jar" depends="clean, compile">
+		<jar destfile="${openfireJsPlugin.dir}\plugin\lib\openfirejs.jar">
+			<fileset dir="${openfireJsPlugin.dir}\build\classes">
+				<include name="**" />
+			</fileset>
+		</jar>
+		<jar destfile="${openfireJsPlugin.dir}\plugin\WEB-INF\lib\openfirejs.jar">
+			<fileset dir="${openfireJsPlugin.dir}\build\classes">
+				<include name="**" />
+			</fileset>
+		</jar>
+		
+	</target>
+	
+	<target name="war" depends="jar">
+		<jar destfile="${openfire.home}\plugins\openfirejs.war">
+			<fileset dir="${openfireJsPlugin.dir}\plugin">
+				<include name="**" />
+			</fileset>
+		</jar>
+	</target>
+</project>
+

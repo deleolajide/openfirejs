@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+    <class>org.igniterealtime.openfirejs.OpenfireJsPlugin</class>
+    <name>OpenfireJs Plugin</name>
+    <description>Javascript for Openfire</description>
+    <author>Igniterealtime Community</author>
+    <version>0.0.0.01</version>
+    <minServerVersion>3.7.0</minServerVersion> 
+</plugin>
