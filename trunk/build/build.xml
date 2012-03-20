@@ -33,11 +33,6 @@
 				<include name="**" />
 			</fileset>
 		</jar>
-		<jar destfile="${openfireJsPlugin.dir}\plugin\WEB-INF\lib\openfirejs.jar">
-			<fileset dir="${openfireJsPlugin.dir}\build\classes">
-				<include name="**" />
-			</fileset>
-		</jar>
 		
 	</target>
 	
